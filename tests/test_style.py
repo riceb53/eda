@@ -3,7 +3,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-from eda.style import remove_spines
+from brianeda.style import remove_spines
 
 
 def test_remove_spines_hides_requested_spines():
