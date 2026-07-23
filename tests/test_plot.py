@@ -3,7 +3,7 @@ import matplotlib
 matplotlib.use("Agg")
 import pandas as pd
 
-from eda.plot import line
+from brianeda.plot import line
 
 
 def test_line_plots_dataframe_columns():

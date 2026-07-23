@@ -1,4 +1,4 @@
-# eda
+# brianeda
 
 Matplotlib-based plotting for pandas DataFrames.
 
@@ -12,7 +12,7 @@ pip install brianeda
 
 ```python
 import pandas as pd
-from eda import line
+from brianeda import line
 
 df = pd.DataFrame({"x": [1, 2, 3], "y": [1, 4, 9]})
 line(df, "x", "y")
