@@ -12,6 +12,7 @@ def _plot(kind, df, x, y, ax=None, **kwargs):
 
 
 def line(df, x, y, ax=None, **kwargs):
+    kwargs.setdefault("linewidth", 4)
     return _plot("plot", df, x, y, ax=ax, **kwargs)
 
 
