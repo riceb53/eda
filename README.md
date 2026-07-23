@@ -5,7 +5,7 @@ Matplotlib-based plotting for pandas DataFrames.
 ## Installation
 
 ```bash
-pip install eda
+pip install brianeda
 ```
 
 ## Usage

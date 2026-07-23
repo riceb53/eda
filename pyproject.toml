@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "eda"
+name = "brianeda"
 version = "0.1.0"
 description = "Matplotlib-based plotting for pandas DataFrames"
 readme = "README.md"
