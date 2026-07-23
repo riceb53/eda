@@ -1,6 +1,6 @@
 # eda
 
-Utilities for modifying and styling matplotlib charts.
+Matplotlib-based plotting for pandas DataFrames.
 
 ## Installation
 
@@ -11,13 +11,16 @@ pip install eda
 ## Usage
 
 ```python
-import matplotlib.pyplot as plt
-from eda.style import remove_spines
+import pandas as pd
+from eda import line
 
-fig, ax = plt.subplots()
-ax.plot([1, 2, 3], [1, 4, 9])
-remove_spines(ax)
+df = pd.DataFrame({"x": [1, 2, 3], "y": [1, 4, 9]})
+line(df, "x", "y")
 ```
+
+`line`, `scatter`, and `bar` all take a DataFrame and two column names, plot
+onto an `Axes` (creating one via `plt.gca()` if `ax` isn't passed), and
+return the `Axes` for further customization.
 
 ## Development
 
