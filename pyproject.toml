@@ -18,7 +18,7 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=7", "build", "twine"]
+dev = ["build", "twine"]
 
 [project.urls]
 Homepage = "https://github.com/riceb53/eda"
