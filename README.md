@@ -25,6 +25,5 @@ return the `Axes` for further customization.
 ## Development
 
 ```bash
-pip install -e ".[dev]"
-pytest
+pip install -e ".[dev]"   # build + twine for packaging
 ```
