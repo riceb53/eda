@@ -22,6 +22,22 @@ line(df, "x", "y")
 onto an `Axes` (creating one via `plt.gca()` if `ax` isn't passed), and
 return the `Axes` for further customization.
 
+### Boxplots with a mood
+
+`boxplot` draws one box per numeric column and colors them from a palette
+chosen by `mood`:
+
+```python
+from brianeda import boxplot
+
+boxplot(df, mood="excited")            # all numeric columns
+boxplot(df, columns=["a", "b"], mood="sad")
+```
+
+Available moods (`brianeda.MOODS`): sad, excited, silly, calm, angry, happy,
+mysterious, romantic, energetic, gloomy, playful, serene, bold, dreamy,
+fierce, cheerful, melancholy, tropical, icy, earthy.
+
 ## Development
 
 ```bash
