@@ -29,14 +29,14 @@ MOODS = {
 }
 
 
-def boxplot(df, columns=None, mood="calm", ax=None, **kwargs):
+def boxplot(data, labels=None, mood="calm", ax=None, **kwargs):
     if mood not in MOODS:
         raise ValueError(f"unknown mood {mood!r}; choose from {sorted(MOODS)}")
-    columns = list(columns) if columns is not None else list(df.select_dtypes("number"))
     ax = ax or plt.gca()
-    result = ax.boxplot([df[c].dropna() for c in columns], patch_artist=True, **kwargs)
+    result = ax.boxplot(data, patch_artist=True, **kwargs)
     for box, color in zip(result["boxes"], cycle(MOODS[mood])):
         box.set_facecolor(color)
-    ax.set_xticks(range(1, len(columns) + 1))
-    ax.set_xticklabels(columns)
+    if labels is not None:
+        ax.set_xticks(range(1, len(labels) + 1))
+        ax.set_xticklabels(labels)
     return remove_spines(ax)

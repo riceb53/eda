@@ -1,6 +1,6 @@
 # brianeda
 
-Matplotlib-based plotting for pandas DataFrames.
+Matplotlib-based plotting for plain Python lists.
 
 ## Installation
 
@@ -11,27 +11,24 @@ pip install brianeda
 ## Usage
 
 ```python
-import pandas as pd
 from brianeda import line
 
-df = pd.DataFrame({"x": [1, 2, 3], "y": [1, 4, 9]})
-line(df, "x", "y")
+line([1, 2, 3], [1, 4, 9])
 ```
 
-`line`, `scatter`, and `bar` all take a DataFrame and two column names, plot
-onto an `Axes` (creating one via `plt.gca()` if `ax` isn't passed), and
-return the `Axes` for further customization.
+`line`, `scatter`, and `bar` all take two sequences (`x`, `y`), plot onto an
+`Axes` (creating one via `plt.gca()` if `ax` isn't passed), and return the
+`Axes` for further customization.
 
 ### Boxplots with a mood
 
-`boxplot` draws one box per numeric column and colors them from a palette
-chosen by `mood`:
+`boxplot` takes one sequence (a single box) or a list of sequences (one box
+each) and colors them from a palette chosen by `mood`:
 
 ```python
 from brianeda import boxplot
 
-boxplot(df, mood="excited")            # all numeric columns
-boxplot(df, columns=["a", "b"], mood="sad")
+boxplot([[1, 2, 3, 9], [2, 3, 5, 6]], labels=["a", "b"], mood="excited")
 ```
 
 Available moods (`brianeda.MOODS`): sad, excited, silly, calm, angry, happy,
