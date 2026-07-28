@@ -1,5 +1,6 @@
 from importlib.metadata import PackageNotFoundError, version
 
+from .boxplot import MOODS, boxplot
 from .plot import bar, line, scatter
 from .style import remove_spines
 
@@ -8,4 +9,4 @@ try:
 except PackageNotFoundError:
     __version__ = "0.0.0"
 
-__all__ = ["bar", "line", "scatter", "remove_spines", "__version__"]
+__all__ = ["bar", "boxplot", "line", "scatter", "remove_spines", "MOODS", "__version__"]
