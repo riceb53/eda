@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "brianeda"
-version = "0.2.0"
+version = "0.3.0"
 description = "Matplotlib-based plotting for pandas DataFrames"
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.9"
 authors = [{ name = "riceb53" }]
-dependencies = ["matplotlib>=3.5", "pandas>=1.5"]
+dependencies = ["matplotlib>=3.5"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
