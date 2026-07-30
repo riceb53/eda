@@ -8,6 +8,13 @@ Matplotlib-based plotting for pandas DataFrames.
 pip install brianeda
 ```
 
+The functions take pandas DataFrames, so you'll need `pandas` in your
+environment too (it isn't installed automatically):
+
+```bash
+pip install pandas
+```
+
 ## Usage
 
 ```python
